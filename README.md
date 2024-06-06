@@ -12,6 +12,10 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
 - Creating Views
 - Converting Data Types
 
+### Dashboard 
+<img width="946" alt="Screenshot 2024-06-06 215510" src="https://github.com/Michaelaalo/Covid19_Tableau_and_SQL_project/assets/93910710/939814bd-4ed9-400d-a97c-c12033610c1d">
+
+
 #### Steps and Explanation
 
 1. **Initial Data Exploration**
