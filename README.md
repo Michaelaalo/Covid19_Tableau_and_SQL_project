@@ -177,7 +177,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL te
       ```
     - **Explanation:** Creates a view to store the calculated data for future visualizations and further analysis.
 
-#### Data Visualization in Tableau
+### Data Visualization in Tableau
 
 After the data analysis in SQL, the data was exported to Excel and then imported into Tableau for visualization. The following views were created in Tableau:
 
