@@ -181,6 +181,8 @@ This project involves exploring and analyzing Covid-19 data using various SQL te
 
 After the data analysis in SQL, the data was exported to Excel and then imported into Tableau for visualization. The following views were created in Tableau:
 
+<img width="946" alt="Screenshot 2024-06-06 215510" src="https://github.com/Michaelaalo/Covid19_Tableau_and_SQL_project/assets/93910710/939814bd-4ed9-400d-a97c-c12033610c1d">
+
 1. **Geographical Map**
    - **Description:** Shows the percentage of the population affected by Covid-19 in each country.
    - **Purpose:** Visualizes the geographical spread of Covid-19, highlighting the most impacted areas.
