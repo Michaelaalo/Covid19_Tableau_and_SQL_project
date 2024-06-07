@@ -1,16 +1,16 @@
 ### Covid-19 Data Exploration
 
 #### Overview
-This project involves exploring and analyzing Covid-19 data using various SQL skills. The goal is to derive insights about the impact of Covid-19 across different countries and continents. Below is an explanation of each step, rephrased for clarity.
+This project involves exploring and analyzing Covid-19 data using various SQL techniques to gain insights into the pandemic's impact across different countries and continents. The results are then visualized using Tableau.
 
 #### Skills Demonstrated
-- Joins
-- Common Table Expressions (CTEs)
-- Temporary Tables
-- Window Functions
-- Aggregate Functions
-- Creating Views
-- Converting Data Types
+- **Joins**: Combining data from different tables.
+- **Common Table Expressions (CTEs)**: Simplifying complex queries.
+- **Temporary Tables**: Storing intermediate results.
+- **Window Functions**: Performing calculations across a set of table rows.
+- **Aggregate Functions**: Summarizing data.
+- **Creating Views**: Storing complex queries for reuse.
+- **Converting Data Types**: Ensuring data is in the correct format.
 
 #### Steps and Explanation
 
@@ -22,7 +22,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
      WHERE continent IS NOT NULL 
      ORDER BY location, date;
      ```
-   - **Explanation:** Retrieves all records from the CovidDeaths table where the continent is specified, ordering them by location and date to get a structured view of the data.
+   - **Explanation:** Fetches all records where the continent is specified, ordered by location and date to provide a clear, structured overview of the data.
 
 2. **Selecting Initial Data**
    - **Code:**
@@ -32,7 +32,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
      WHERE continent IS NOT NULL 
      ORDER BY location, date;
      ```
-   - **Explanation:** Selects specific columns to focus on, such as location, date, total cases, new cases, total deaths, and population, ordered by location and date for easy analysis.
+   - **Explanation:** Retrieves key columns like location, date, total cases, new cases, total deaths, and population, ordered by location and date for easy analysis.
 
 3. **Total Cases vs Total Deaths**
    - **Code:**
@@ -44,7 +44,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
        AND continent IS NOT NULL 
      ORDER BY location, date;
      ```
-   - **Explanation:** Calculates the death percentage for countries with 'states' in their names, showing the likelihood of dying if infected by Covid-19 in those countries.
+   - **Explanation:** Calculates the death percentage for countries with 'states' in their names, indicating the likelihood of dying if infected.
 
 4. **Total Cases vs Population**
    - **Code:**
@@ -54,7 +54,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
      FROM PortfolioProject..CovidDeaths
      ORDER BY location, date;
      ```
-   - **Explanation:** Shows the percentage of the population infected with Covid-19 for each location, providing insight into the spread of the virus.
+   - **Explanation:** Shows the percentage of the population infected with Covid-19 for each location.
 
 5. **Countries with the Highest Infection Rate**
    - **Code:**
@@ -66,7 +66,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
      GROUP BY Location, Population
      ORDER BY PercentPopulationInfected DESC;
      ```
-   - **Explanation:** Identifies countries with the highest infection rate relative to their population by calculating the maximum infection count and infection percentage.
+   - **Explanation:** Identifies countries with the highest infection rate relative to their population.
 
 6. **Countries with the Highest Death Count**
    - **Code:**
@@ -78,7 +78,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
      GROUP BY Location
      ORDER BY TotalDeathCount DESC;
      ```
-   - **Explanation:** Lists countries with the highest number of deaths, providing a perspective on the mortality impact of Covid-19.
+   - **Explanation:** Lists countries with the highest number of deaths, providing insight into the mortality impact of Covid-19.
 
 7. **Continents with the Highest Death Count**
    - **Code:**
@@ -102,7 +102,7 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
      WHERE continent IS NOT NULL 
      ORDER BY total_cases, total_deaths;
      ```
-   - **Explanation:** Provides a global summary of total cases, total deaths, and death percentage, giving an overall view of the pandemic's impact.
+   - **Explanation:** Provides a global summary of total cases, total deaths, and death percentage.
 
 9. **Total Population vs Vaccinations**
    - **Code:**
@@ -175,4 +175,20 @@ This project involves exploring and analyzing Covid-19 data using various SQL sk
          AND dea.date = vac.date
       WHERE dea.continent IS NOT NULL;
       ```
-    - **Explanation:** Creates a view to store the calculated data, which can be used later for visualizations and further analysis.
+    - **Explanation:** Creates a view to store the calculated data for future visualizations and further analysis.
+
+#### Data Visualization in Tableau
+
+After the data analysis in SQL, the data was exported to Excel and then imported into Tableau for visualization. The following views were created in Tableau:
+
+1. **Geographical Map**
+   - **Description:** Shows the percentage of the population affected by Covid-19 in each country.
+   - **Purpose:** Visualizes the geographical spread of Covid-19, highlighting the most impacted areas.
+
+2. **Line Graph**
+   - **Description:** Illustrates the percentage of the population infected over time.
+   - **Purpose:** Tracks the trend of infections, providing insights into how the situation evolved over time.
+
+3. **Bar Chart**
+   - **Description:** Displays the total deaths per continent.
+   - **Purpose:** Compares the mortality impact of Covid-19 across different continents, highlighting regions with the highest death tolls.
