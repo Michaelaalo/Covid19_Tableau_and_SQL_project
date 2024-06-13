@@ -3,6 +3,9 @@
 #### Overview
 This project involves exploring and analyzing Covid-19 data using various SQL techniques to gain insights into the pandemic's impact across different countries and continents. The results are then visualized using Tableau.
 
+#### Dashboard 
+![covid dashbaord](https://github.com/Michaelaalo/Covid19_Tableau_and_SQL_project/assets/93910710/1696e705-f338-4687-a292-6eeded8be0a9)
+
 #### Skills Demonstrated
 - **Joins**: Combining data from different tables.
 - **Common Table Expressions (CTEs)**: Simplifying complex queries.
